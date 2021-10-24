@@ -9,7 +9,13 @@ const PORT = 4000;
 
 // server.listen(포트, 콜백함수)
 server.listen(PORT, () => {
-  console.log(PORT + "SERVER START 🍀 !");
+  console.log(PORT + " SERVER START 🍀 !");
 });
 
 // 기능1 ( ( ) => { } ) : 기능 1 실행 후 콜백함수 실행
+
+// 현재 우리 서버 주소 => localhost:4000/ (= 127.0.0.1:4000)
+
+server.get("/", (req, res) => {
+  res.send("Welcome To My First App!! 🌟");
+});
